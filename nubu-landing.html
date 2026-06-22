@@ -30,27 +30,22 @@ canvas {
 }
 .features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
   max-width: 700px;
   width: 100%;
-  margin-top: 12px;
-}
-.feature:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  max-width: 50%;
-  justify-self: center;
+  margin-top: 16px;
 }
 .feature {
   background: #ffffff;
   border: 1px solid #dedede;
-  border-radius: 10px;
-  padding: 12px;
+  border-radius: 12px;
+  padding: 16px;
   text-align: center;
 }
-.feature-icon { font-size: 1.4rem; margin-bottom: 4px; }
-.feature h3 { font-size: 0.82rem; font-weight: 600; margin-bottom: 2px; }
-.feature p { font-size: 0.75rem; color: #6f6f6f; }
+.feature-icon { font-size: 1.8rem; margin-bottom: 8px; }
+.feature h3 { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+.feature p { font-size: 0.8rem; color: #6f6f6f; }
 .footer { margin-top: 40px; color: #919191; font-size: 0.8rem; }
 .footer a { color: #5B9BD5; text-decoration: none; }
 .click-hint { color: #919191; font-size: 0.8rem; margin-bottom: 20px; }
@@ -126,39 +121,41 @@ canvas {
 <canvas id="canvas" width="360" height="360"></canvas>
 <p class="click-hint">Click to restart animation</p>
 
+<div class="features">
+  <div class="feature">
+    <div class="feature-icon">🗣️</div>
+    <h3>Natural Language</h3>
+    <p>Just say what you ate. No forms or menus.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">📊</div>
+    <h3>26+ Nutrients</h3>
+    <p>Tracks vitamins, minerals, macros, and more.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">⚠️</div>
+    <h3>Gap Detection</h3>
+    <p>See what you're missing and how to fix it.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">💾</div>
+    <h3>Saved Meals</h3>
+    <p>Store favorites so you never retype.</p>
+  </div>
+</div>
 
 <div class="readme-section">
   <h2>Find It Here</h2>
   <p><a href="https://github.com/bethz/nubu">github.com/bethz/nubu</a></p>
 
   <h2>What NUBU Does</h2>
-  <div class="features">
-    <div class="feature">
-      <div class="feature-icon">🗣️</div>
-      <h3>Natural Language</h3>
-      <p>Just say what you ate. No forms or menus.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">📊</div>
-      <h3>26+ Nutrients</h3>
-      <p>Tracks vitamins, minerals, macros, and more.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">⚠️</div>
-      <h3>Gap Detection</h3>
-      <p>See what you're missing and how to fix it.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">💾</div>
-      <h3>Saved Meals</h3>
-      <p>Store favorites so you never retype.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">📈</div>
-      <h3>Visual Dashboard</h3>
-      <p>Color-coded bars show where you stand daily.</p>
-    </div>
-  </div>
+  <ul>
+    <li><strong>Natural language food logging</strong> - Just say what you ate ("2 eggs, toast with jelly, black tea")</li>
+    <li><strong>Full nutrient analysis</strong> - Tracks 26+ nutrients including vitamins, minerals, and macros</li>
+    <li><strong>Saved meals</strong> - Store common meals so you don't retype them every day</li>
+    <li><strong>Gap detection</strong> - Highlights nutrients you're low on and suggests foods to fix it</li>
+    <li><strong>Visual dashboard</strong> - Color-coded progress bars show where you stand daily</li>
+  </ul>
 
   <h2>Tracked Nutrients</h2>
   <div class="nutrient-grid">
