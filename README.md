@@ -1,5 +1,13 @@
 # NUBU - NUtrition builds a Better yoU! 🥦🥕🍊
 
+<p align="center">
+  <img src="nubu-logo.png" alt="NUBU - BABU surrounded by healthy food" width="300" />
+</p>
+
+<p align="center">
+  <a href="nubu-landing.html">See the animated version</a>
+</p>
+
 NUBU is a personal nutrition tracking tool that helps you understand what you're eating, identify nutrient gaps, and build better habits over time.
 
 ## What It Does
