@@ -49,6 +49,66 @@ canvas {
 .footer { margin-top: 40px; color: #919191; font-size: 0.8rem; }
 .footer a { color: #5B9BD5; text-decoration: none; }
 .click-hint { color: #919191; font-size: 0.8rem; margin-bottom: 20px; }
+.readme-section {
+  max-width: 700px;
+  width: 100%;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #dedede;
+}
+.readme-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #242424;
+  margin: 28px 0 12px 0;
+}
+.readme-section h2:first-child { margin-top: 0; }
+.readme-section ul, .readme-section ol {
+  padding-left: 20px;
+  margin: 0;
+}
+.readme-section li {
+  font-size: 0.92rem;
+  color: #3d3d3d;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.readme-section p {
+  font-size: 0.92rem;
+  color: #3d3d3d;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+.readme-section a { color: #5B9BD5; text-decoration: none; }
+.readme-section a:hover { text-decoration: underline; }
+.readme-section code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.nutrient-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 8px 0;
+}
+.nutrient-group {
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 14px;
+}
+.nutrient-group h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #5B9BD5;
+  margin-bottom: 4px;
+}
+.nutrient-group p {
+  font-size: 0.82rem;
+  color: #5c5c5c;
+}
 </style>
 </head>
 <body>
@@ -82,6 +142,63 @@ canvas {
     <h3>Saved Meals</h3>
     <p>Store favorites so you never retype.</p>
   </div>
+</div>
+
+<div class="readme-section">
+  <h2>What NUBU Does</h2>
+  <ul>
+    <li><strong>Natural language food logging</strong> - Just say what you ate ("2 eggs, toast with jelly, black tea")</li>
+    <li><strong>Full nutrient analysis</strong> - Tracks 26+ nutrients including vitamins, minerals, and macros</li>
+    <li><strong>Saved meals</strong> - Store common meals so you don't retype them every day</li>
+    <li><strong>Gap detection</strong> - Highlights nutrients you're low on and suggests foods to fix it</li>
+    <li><strong>Visual dashboard</strong> - Color-coded progress bars show where you stand daily</li>
+  </ul>
+
+  <h2>Tracked Nutrients</h2>
+  <div class="nutrient-grid">
+    <div class="nutrient-group">
+      <h3>Macros</h3>
+      <p>Calories, Protein, Fat, Saturated Fat, Carbs, Fiber, Sugar</p>
+    </div>
+    <div class="nutrient-group">
+      <h3>Vitamins</h3>
+      <p>A, C, D, E, K1, K2, Thiamin, Riboflavin, Niacin, B6, Folate, B12</p>
+    </div>
+    <div class="nutrient-group">
+      <h3>Minerals</h3>
+      <p>Calcium, Iron, Magnesium, Phosphorus, Potassium, Sodium, Zinc, Selenium</p>
+    </div>
+  </div>
+
+  <h2>Data Source</h2>
+  <p>Nutrient data powered by <a href="https://fdc.nal.usda.gov/">USDA FoodData Central</a>.</p>
+
+  <h2>Architecture</h2>
+  <ul>
+    <li><strong>Storage:</strong> Excel workbook (easy backup, lives in OneDrive)</li>
+    <li><strong>Dashboard:</strong> Self-contained HTML with visual nutrient progress bars</li>
+    <li><strong>Lookup:</strong> USDA FoodData Central API for precise nutrient values</li>
+    <li><strong>Interface:</strong> Copilot CLI skill for natural language input</li>
+  </ul>
+
+  <h2>Getting Started</h2>
+  <ol>
+    <li>Get a free USDA API key at <a href="https://fdc.nal.usda.gov/api-key-signup.html">fdc.nal.usda.gov</a></li>
+    <li>Clone this repo</li>
+    <li>Check <code>dashboard/nutrition-dashboard.html</code> for the daily tracker view</li>
+  </ol>
+
+  <h2>Future Plans</h2>
+  <ul>
+    <li>Blood test result comparison (intake vs. measured levels)</li>
+    <li>Exercise logging and calorie adjustment</li>
+    <li>Weekly/monthly trend reports</li>
+    <li>Supplement tracking</li>
+    <li>Water intake</li>
+  </ul>
+
+  <h2>Part of the "Better yoU" Family</h2>
+  <p>NUBU is a companion to <a href="https://github.com/bethz/babu-communication-coach">BABU (Be A Better yoU!)</a>, a communication coaching tool.</p>
 </div>
 
 <p class="footer">Part of the <a href="https://github.com/bethz/babu-communication-coach">Better yoU</a> family. Built by Beth Zeranski.</p>
